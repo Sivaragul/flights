@@ -132,9 +132,8 @@ namespace Flights.Controllers
                     if (k1)
                     {
 
-                        ViewBag.Message1= $"<script>alert('{fdata.flightid} created successfully')</script>";
-                        ModelState.Clear();
-                        return View();
+                       
+                        return RedirectToAction("Flightlist");
                     }
                     else
                     {
