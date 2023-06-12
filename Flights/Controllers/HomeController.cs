@@ -28,19 +28,19 @@ namespace Flights.Controllers
             }
             else if(p.username.ToString() == "admin@gmail.com" && p.password.ToString() != "Admin@123")
             {
-                ViewBag.Message1 = "Check the password";
+                ViewBag.Message = "Check the password";
                 return View();
             }
             else if(p.username.ToString() != "admin@gmail.com" && p.password.ToString() == "Admin@123")
             {
 
-                ViewBag.Message2 = "Check the username";
+                ViewBag.Message= "Check the username";
                 return View();
 
             }
             else
             {
-                ViewBag.Message3 = "Enter the correct email id and password";
+                ViewBag.Message = "Enter the correct email id and password";
                 return View();
             }
         }

@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1vthb5tv.f3j~" />
+    <None Remove="Views\Flight\Flightlist.cshtml~RF42c4a6.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\css\Externalstyles.css" />
   </ItemGroup>
 

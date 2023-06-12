@@ -132,25 +132,26 @@ namespace Flights.Controllers
                     if (k1)
                     {
 
-
-                        return RedirectToAction("Flightlist");
+                        ViewBag.Message1= $"<script>alert('{fdata.flightid} created successfully')</script>";
+                        ModelState.Clear();
+                        return View();
                     }
                     else
                     {
-                        ViewBag.Message2 = "Check data and sql given";
+                        ViewBag.Message = "Check data and sql given";
                         return View(c);
                     }
                 }
                 else
                 {
-                    ViewBag.Message3 = "Departure datetime cannot be greater than arrival date time";
+                    ViewBag.Message = "Departure datetime cannot be greater than arrival date time";
 
                     return View(c);
                 }
             }
             catch
             {
-                ViewBag.Message1 = "Check the formats of the data  given";
+                ViewBag.Message = "Check the formats of the data  given";
                 return View(c);
             }
 
@@ -202,13 +203,13 @@ namespace Flights.Controllers
                 }
                 else
                 {
-                    ViewBag.Message5 = "Check Datas again";
+                    ViewBag.Message = "Check Datas again";
                     return View(p);
                 }
             }
             else
             {
-                ViewBag.Message4 = "Departure datetime must be less than the Arrival datetime";
+                ViewBag.Message = "Departure datetime must be less than the Arrival datetime";
                 return View(p);
             }
 

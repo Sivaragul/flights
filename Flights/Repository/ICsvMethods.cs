@@ -76,7 +76,7 @@ namespace Flights.Repository
         public string extractdata() //extracting data from the sql
         {
             var p = context.FlightDatas.ToList();
-            string[] columns = new string[] { "flightid","departure_destination","departure_date","arrival_destination","arrival_Date" };
+            string[] columns = new string[] { "flightid","departure_destination","arrival_destination","departure_date","arrival_date" };
             string csv = string.Empty;
             int i = 0;
             foreach (var ps in columns)
@@ -98,9 +98,9 @@ namespace Flights.Repository
             {
                 csv += pd.flightid.Replace(',', ';') + ',';
                 csv += pd.departure_destination.Replace(',', ';') + ',';
-                csv += Convert.ToString(pd.departure_date).Replace(',', ';') + ',';
                 csv += pd.arrival_destination.Replace(',', ';') + ',';
-                csv += pd.arrival_date.ToString().Replace(',', ';') + "\r\n";
+                csv += Convert.ToString(pd.departure_date).Replace(',', ';').Replace('-','/') + ',';
+                csv += pd.arrival_date.ToString().Replace(',', ';').Replace('-','/') + "\r\n";
            
 
             }

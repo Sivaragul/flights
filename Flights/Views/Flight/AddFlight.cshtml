@@ -46,12 +46,11 @@
                     <div class="btn"> @Html.ActionLink("Back to list","Flightlist","Flight",null,new {@class="btn btn-warning"})</div>
                     <button type="submit" class="btn btn-primary" class="btn">Save Flight</button>
                 </div>
-                    
-                <p style="color:red">@ViewBag.Message1</p>
-                <p style="color:red">@ViewBag.Message2</p>
-                <p style="color:red">@ViewBag.Message3</p>
+                @Html.Raw(ViewBag.Message1)
+                <p style="color:red">@ViewBag.Message</p>
+               
                 </form>
-          
+         
               
               </div>
                 </body>
